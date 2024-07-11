@@ -9,6 +9,11 @@ function CalculateTriangleArea(){
 //    console.log(newTriangleBaseFieldvalue)
 //    console.log(newTriangleHeightFieldvalue)
 
+//clear the input field
+TriangleField.value='';
+TriangleHightField.value='';
+
+//calculate area
 const Area = 0.5*newTriangleBaseFieldvalue*newTriangleHeightFieldvalue;
 
  const TriangleAreaValue =document.getElementById("TriangleAreaValue");
@@ -35,6 +40,10 @@ function CalculatRectangleArea(){
  //    console.log(newTriangleBaseFieldvalue)
  //    console.log(newTriangleHeightFieldvalue)
  
+//clear the input field
+RectangleField.value='';
+RectanglelengthField.value='';
+
 //input validation
 if(isNaN(newRectanglelengthValue) || isNaN(newRectanglewidthvalue)){
 alert("please enter a number");
@@ -98,6 +107,8 @@ function CalculatRhombusArea(){
 
 // add to calculadtion entry
  AddToCalculationEntry("Rombus",RhombusAreaValue);
+
+ RhombusFirst.value='';
 }
 
 
@@ -128,6 +139,8 @@ function getInputFieldValue(InputId){
     const InputFieldValue = document.getElementById(InputId);
     const InputFieldValueString = InputFieldValue.value;
     const newInputFieldValue = parseFloat(InputFieldValueString)
+    // newInputFieldValue.value ='';
+    InputFieldValue.value='';
     return newInputFieldValue;
 }
 
